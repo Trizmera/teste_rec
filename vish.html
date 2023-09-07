@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Não Ordenada</title>
+</head>
+<body>
+    
+
+    <ul id="lista">
+        
+    </ul>
+
+    <button id="adicionar-item">Adicionar Item</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+                
+        const botaoAdicionar = document.getElementById("adicionar-item");
+        const lista = document.getElementById("lista");
+        botaoAdicionar.addEventListener("click", function () {
+            const novoItem = document.createElement("li");
+            novoItem.textContent = "Novo"; 
+            lista.appendChild(novoItem);
+        });
+    });
+
+    </script>
+</body>
+</html>

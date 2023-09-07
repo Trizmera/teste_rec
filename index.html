@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Super Página</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #353640; 
+            color: #f8e4dc; 
+            padding: 10px 0; 
+            text-align: center; 
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px; 
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f8d4dc; 
+            font-weight: bold;
+        }
+
+        section {
+            padding: 50px 0;
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        #inicio {
+            background-color: #A4CAB1;
+            margin-top: 60px;
+        }
+
+        #sobre {
+            background-color: #e3e1ac;
+        }
+
+        #vendas {
+            background-color: #556574;
+        }
+
+        #fornecedores {
+            background-color: #be7458;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto 30px;
+        }
+
+        #contato {
+            background-color: #31404d;
+            color: #f8e4dc;
+        }
+
+        label, input, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #353640;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #353640;
+            color: #109886;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #109886;
+            color: #353640;
+        }
+    </style>
+
+    <section id="inicio">
+        <h2>Seção de Início</h2>
+        <p>Bem-vindo à página inicial.</p>
+    </section>
+
+    <section id="sobre">
+        <h2>Seção Sobre</h2>
+        <p>Tudo tudo "Sobre" do meu site.</p>
+    </section>
+
+    <section id="vendas">
+        <h2>Seção Vendas</h2>
+        <p>Vendas do meu site.</p>
+    </section>
+
+    
+    <section id="fornecedores">
+        <h2>Seção Fornecedores</h2>
+        <p>Fornecedores do meu site.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Seção de Contato</h2>
+        <p>Entre em contato conosco através do formulário abaixo:</p>
+    
+        <form id="form-contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+    
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+    
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("form-contato").addEventListener("submit", function (event) {
+            event.preventDefault(); 
+            var nome = document.getElementById("nome").value;
+            var saudacao = "Olá, " + nome + "! Sua mensagem foi enviada com sucesso.";
+    
+            alert(saudacao);
+    
+            document.getElementById("nome").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("mensagem").value = "";
+        });
+    </script>
+    
+    
+</body>
+</html>
